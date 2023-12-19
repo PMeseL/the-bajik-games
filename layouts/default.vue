@@ -1,6 +1,11 @@
 <template>
-  	<div>
-  	</div>
+
+    <div class="h-full w-full">
+
+        <slot/>
+
+    </div>
+
 </template>
 
 <script setup>
