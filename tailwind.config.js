@@ -87,7 +87,70 @@ export default {
 					20: '#ff8c00',
 					10: '#ff8000',
 				}
-			}
+			},
+
+			fontSize: {
+				'2xs': '10px',
+				'3xs': '8px',
+			},
+
+			boxShadow: {
+				material: '0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15)',
+				weak_material: '0px 1px 2px rgba(0, 0, 0, 0.15), 0px 2px 6px 2px rgba(0, 0, 0, 0.05)',
+				primary: '2px 2px 5px rgba(208, 9, 141, 0.4)',
+				secondary: '2px 2px 5px rgba(33, 158, 188, 0.4)',
+				white: '2px 2px 5px rgba(255, 255, 255, 0.4)',
+			},
+		
+			keyframes: {
+	
+				'swipe-up': {
+					from: { transform: 'translateY(50px)', opacity: '0' },
+					to: { transform: 'translateY(0)', opacity: '1' },
+				},
+		
+				dropdown: {
+					from: { transform: 'translateY(-30px)', opacity: '0' },
+					to: { transform: 'translateY(0)', opacity: '1' },
+				},
+		
+				shine: {
+					to: { 'background-position-x': '-200%;' },
+				},
+		
+				fade: {
+					from: { opacity: 0 },
+					to: { opacity: 1 },
+				},
+		
+				buzz: {
+					'0%': { transform: 'translateX(0)' },
+					'20%': { transform: 'translateX(5px)' },
+					'40%': { transform: 'translateX(-5px)' },
+					'60%': { transform: 'translateX(5px)' },
+					'80%': { transform: 'translateX(-5px)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+		
+				'shadow-pulse': {
+					'0%': {
+						'box-shadow': '0 0 0 0px rgba(33, 158, 188, 0.3)'
+					},
+					'100%': {
+						'box-shadow': '0 0 0 16px rgba(33, 158, 188, 0)'
+					}
+				}
+			},
+		
+			animation: {
+
+				skeleton: 'skeleton 1s infinite',
+				shine: 'shine linear infinite',
+				fade: 'fade 0.3s',
+				dropdown: 'dropdown 0.3s',
+				buzz: 'buzz 0.3s',
+				'shadow-pulse': 'shadow-pulse 1.2s infinite'
+			},
 		},
 	},
 
