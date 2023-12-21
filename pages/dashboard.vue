@@ -2,14 +2,14 @@
 
     <div class="relative h-full w-full">
 
-        <Transition :name="slideTransition">
+        <Transition :name="slideTransition" v-for="game, index in games" :key="game">
 
-            <div v-if="currentGame === 0" class="h-full w-full flex flex-col gap-8 text-white text-sm p-8">
+            <div v-if="currentGame === index" class="h-full w-full flex flex-col gap-8 text-white text-sm p-8">
 
                 <div>
 
-                    <p class="text-2xl font-semibold">Javier El Illor</p>
-                    <p class="text-xs font-light mt-4">Debes contar Javielillors y solo Javielillors pero cuidado!! Algunos van hasta las cejas de farlopa 😜</p>
+                    <p class="text-2xl font-semibold" v-html="game.title"/>
+                    <p class="text-xs font-light mt-4" v-html="game.description"/>
 
                 </div>
 
@@ -17,42 +17,19 @@
 
                     <div class="w-fit py-2 px-3 bg-neutral-40 border border-neutral-70 rounded-md text-2xs">
 
-                        Jugadores: ♾️
+                        Jugadores: {{ game.players }}
 
                     </div>
 
                 </div>
 
-                <GameButtons class="mt-auto"></GameButtons>
+                <GameButtons class="mt-auto" :play="{ click: game.click }">
 
-                <img src="@/assets/javielillor.jpg" alt="" class="absolute bottom-0 left-0 -z-10 animate-[fade_3s]">
-
-            </div>
-
-            <div v-else-if="currentGame === 1" class="h-full w-full flex flex-col gap-8 text-white text-sm p-8">
-
-                <div>
-
-                    <p class="text-2xl font-semibold">Adivina el opening</p>
-                    <p class="text-xs font-light mt-4">Va tocando 🚿 no ?</p>
-
-                </div>
-
-                <div class="flex">
-
-                    <div class="w-fit py-2 px-3 bg-neutral-40 border border-neutral-70 rounded-md text-2xs">
-
-                        Jugadores: ♾️
-
-                    </div>
-
-                </div>
-
-                <GameButtons class="mt-auto">
-
-                    <img src="@/assets/dario.png" alt="" class="absolute bottom-full left-0 w-3/4 -z-10 animate-[fade_1s]">
+                    <img v-if="game.buttonImage" :src="game.buttonImage" alt="" :class="game.buttonImageClass"/>
 
                 </GameButtons>
+
+                <img v-if="game.backgroundImage" :src="game.backgroundImage" alt="" :class="game.backgroundImageClass">
 
             </div>
 
@@ -73,7 +50,10 @@
 
     let slideTransition = ref('slide-forward')
     let currentGame = ref(0)
-    const gamesCount = 2
+
+    const img = useImage()
+    
+    const games = useGames()
 
     const onGameChange = (to) => {
 
@@ -82,8 +62,8 @@
 
         nextTick(() => {
 
-            if ( currentGame.value === 0 ) { currentGame.value = gamesCount - 1 }
-            else if ( currentGame.value === gamesCount - 1 ) { currentGame.value = 0 }
+            if ( currentGame.value === 0 ) { currentGame.value = games.length - 1 }
+            else if ( currentGame.value === games.length - 1 ) { currentGame.value = 0 }
             else { currentGame.value = currentGame.value + to }
         })
     }
