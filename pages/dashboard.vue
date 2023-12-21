@@ -23,11 +23,7 @@
 
                 </div>
 
-                <div class="relative h-14 w-full flex items-center justify-center text-xl text-neutral-10 font-semibold bg-warning-70 hover:bg-warning-60 select-none rounded-md mt-auto shadow-[0_0_5px_theme(colors.warning.70)] border border-warning-90 transition-colors">
-
-                    Unirme
-
-                </div>
+                <GameButtons class="mt-auto"></GameButtons>
 
                 <img src="@/assets/javielillor.jpg" alt="" class="absolute bottom-0 left-0 -z-10 animate-[fade_3s]">
 
@@ -52,13 +48,11 @@
 
                 </div>
 
-                <div class="relative h-14 w-full flex items-center justify-center text-xl text-neutral-10 font-semibold bg-warning-70 hover:bg-warning-60 select-none rounded-md mt-auto shadow-[0_0_5px_theme(colors.warning.70)] border border-warning-90 transition-colors">
-
-                    Unirme
+                <GameButtons class="mt-auto">
 
                     <img src="@/assets/dario.png" alt="" class="absolute bottom-full left-0 w-3/4 -z-10 animate-[fade_1s]">
 
-                </div>
+                </GameButtons>
 
             </div>
 

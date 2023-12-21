@@ -1,8 +1,9 @@
 <template>
 
-    <div v-if="showLoading" class="flex flex-col items-center justify-center">
+    <div v-if="showLoading" class="h-full w-full flex flex-col items-center justify-center text-2xl text-white font-semibold">
 
         The Bajik Games
+
     </div>
 
     <div v-else class="h-full w-full">
@@ -21,5 +22,5 @@ useHead({
 
 const showLoading = ref(true)
 
-onMounted(() => setTimeout(showLoading.value = false, 2000))
+onMounted(() => setTimeout(() => showLoading.value = false, 2000))
 </script>
