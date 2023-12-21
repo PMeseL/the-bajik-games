@@ -27,7 +27,7 @@ html, body, #app { margin: 0; height: 100%; width: 100%; overflow: hidden }
 body {
 
     font-size: 14px;
-    background: theme('colors.neutral.20');
+    background: linear-gradient(theme('colors.neutral.10'), theme('colors.neutral.20'));
 }
 
 .drag { -webkit-app-region: drag }

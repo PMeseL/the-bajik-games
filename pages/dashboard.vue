@@ -56,7 +56,7 @@
 
                     Unirme
 
-                    <img src="@/assets/dario.png" alt="" class="absolute bottom-full left-0 w-2/3 -z-10 animate-[fade_1s]">
+                    <img src="@/assets/dario.png" alt="" class="absolute bottom-full left-0 w-3/4 -z-10 animate-[fade_1s]">
 
                 </div>
 
