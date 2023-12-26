@@ -9,7 +9,7 @@ export const useGames = () => {
             players: '♾️',
             backgroundImage: '/_nuxt/assets/javielillor.jpg',
             backgroundImageClass: 'absolute bottom-0 left-0 -z-10 animate-[fade_3s]',
-            click: () => useRouter().push('/lobby/javielillor')
+            click: () => useRouter().push('/game/javielillor')
         },
         {
             id: 'openings',

@@ -131,14 +131,11 @@ export default {
 					'80%': { transform: 'translateX(-5px)' },
 					'100%': { transform: 'translateX(0)' }
 				},
-		
-				'shadow-pulse': {
-					'0%': {
-						'box-shadow': '0 0 0 0px rgba(33, 158, 188, 0.3)'
-					},
-					'100%': {
-						'box-shadow': '0 0 0 16px rgba(33, 158, 188, 0)'
-					}
+
+				emphasize: {
+					'0%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.3)' },
+					'100%': { transform: 'scale(1)' }
 				}
 			},
 		
@@ -149,7 +146,7 @@ export default {
 				fade: 'fade 0.3s',
 				dropdown: 'dropdown 0.3s',
 				buzz: 'buzz 0.3s',
-				'shadow-pulse': 'shadow-pulse 1.2s infinite'
+				emphasize: 'emphasize 0.3s'
 			},
 		},
 	},
