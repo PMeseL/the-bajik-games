@@ -7,7 +7,7 @@ export const useGames = () => {
             title: 'Javier El Illor',
             description: 'Debes contar Javielillors y solo Javielillors pero cuidado!! Algunos van hasta las cejas de farlopa 😜',
             players: '♾️',
-            backgroundImage: '/_nuxt/assets/javielillor.jpg',
+            backgroundImage: '/graphics/javielillor.jpg',
             backgroundImageClass: 'absolute bottom-0 left-0 -z-10 animate-[fade_3s]',
             click: () => useRouter().push('/game/javielillor')
         },
@@ -16,7 +16,7 @@ export const useGames = () => {
             title: 'Adivina el opening',
             description: 'Va tocando 🚿 no ?',
             players: '♾️',
-            buttonImage: '/_nuxt/assets/dario.png',
+            buttonImage: '/graphics/dario.png',
             buttonImageClass: 'absolute bottom-full left-0 w-3/4 -z-10 animate-[fade_1s]',
             click: () => useRouter().push('/lobby/openings')
         }
